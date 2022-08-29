@@ -8,14 +8,21 @@ const ParticlesComponent = () => {
         return {
             interactivity: {
                 events: {
+                    onClick: {
+                        enable: true,
+                        mode: "push",
+                    },
                     onHover: {
                         enable: true, // enables the hover event
                         mode: "repulse", // make the particles run away from the cursor
                     },
                 },
                 modes: {
+                    push: {
+                        quantity: 10,
+                    },
                     repulse: {
-                        distance: 100, // distance of the particles from the cursor
+                        distance: 50, // distance of the particles from the cursor
                     },
                 },
             },
